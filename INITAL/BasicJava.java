@@ -21,11 +21,7 @@ public class BasicJava {
         System.out.println("Boolean: " + flag);
         System.out.println("String: " + message + "\n");
 
-        // --- String Operations ---
-        System.out.println("== String Operations ==");
-        String name="Jhon";
-        String surname="Doe";
-        System.out.println("Full Name: " + name + " " + surname);
+
         
         // --- Operators ---
         int sum = number + 20;
