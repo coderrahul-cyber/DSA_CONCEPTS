@@ -5,8 +5,9 @@ public class BasicJava {
         System.out.println("Welcome to Basic Java Program\n");
 
         // --- Variables and Data Types ---
-        int number = 10;
         double decimal = 3.14F;
+        int number = 10;
+        int num2 = 20 ;
         double longnum = 234567812121L;
         char letter = 'A';
         boolean flag = true;
