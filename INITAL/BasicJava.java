@@ -26,7 +26,6 @@ public class BasicJava {
         String name="Jhon";
         String surname="Doe";
         System.out.println("Full Name: " + name + " " + surname);
-        System.out.println("Length: " + name.length());
         
         // --- Operators ---
         int sum = number + 20;
