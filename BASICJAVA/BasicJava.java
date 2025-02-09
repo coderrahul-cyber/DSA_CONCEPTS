@@ -1,5 +1,7 @@
 // BasicJava.java
 
+import java.util.Scanner;
+
 public class BasicJava {
     public static void main(String[] args) {
         System.out.println("Welcome to Basic Java Program\n");
@@ -7,7 +9,6 @@ public class BasicJava {
         // --- Variables and Data Types ---
         double decimal = 3.14F;
         int number = 10;
-        int num2 = 20 ;
         double longnum = 234567812121L;
         char letter = 'A';
         boolean flag = true;
@@ -53,6 +54,18 @@ public class BasicJava {
             count++;
         }
         System.out.println();
+
+        // --Function ( checking the prime)---
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to check the prime");
+        int number2 = sc.nextInt();
+        sc.close();
+        if(isPrime(number2)){
+            System.out.println("Number is Prime");
+        }else{
+            System.out.println("NUmber is not prime");
+        }
+
         
         // --- Arrays ---
         System.out.println("== Arrays ==");
@@ -100,6 +113,20 @@ public class BasicJava {
     public static int addNumbers(int a, int b) {
         return a + b;
     }
+
+    public static boolean isPrime(int n){
+
+        
+       
+        for(int i=2 ; i<n ; i++){
+            if (n % i == 0 ){
+                return false;
+            }
+        }
+
+        return  true ;
+
+    }
 }
 
 // --- OOP: Defining a class to demonstrate basics ---
@@ -117,6 +144,8 @@ class Person {
     public void displayInfo() {
         System.out.println("Person Info => Name: " + name + ", Age: " + age);
     }
+
+   
 }
 
 // --- Inheritance: Student extends Person ---
