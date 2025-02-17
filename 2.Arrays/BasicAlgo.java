@@ -17,7 +17,6 @@ public class BasicAlgo {
       int lowerbound = 0 ;
       int upperbound = num.length -1 ;
       int mid = (lowerbound + upperbound) /2 ;
-      int i =1 ;
       while (lowerbound <= upperbound){
         if(num[mid] == key){
             System.out.println("Number " + key + " found " + (mid + 1) + " position"  );
