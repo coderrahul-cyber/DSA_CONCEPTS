@@ -29,6 +29,15 @@ public class ArraysBasic {
         System.out.println();
 
     }
+    public static int findGreatest(int num[]) {
+        int greatest = Integer.MIN_VALUE;
+        for (int i = 1; i < num.length; i++) {
+            if (num[i] > greatest) {
+                greatest = num[i];
+            }
+        }
+        return greatest;
+    }
 
 
     public static void main(String args[]) {
@@ -41,7 +50,10 @@ public class ArraysBasic {
         // String names[] = {"Jhon", "Alice" , "jack"};
         display(numberarr);
         //updation
-        numberarr[2]=1000;
+        // numberarr[2]=1000;
+
+        int res = findGreatest(numberarr);
+        System.out.println("The greatest number is " + res);
 
 
     }
