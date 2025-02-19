@@ -39,6 +39,19 @@ public class ArraysBasic {
         return greatest;
     }
 
+    public static int reverse(int num[]) {
+        int i = 0 , temp ;
+        int last = num.length -1 ;
+        while(i<last){
+            temp = num[i];
+            num[i] = num[last];
+            num[last]= temp;
+            i++;
+            last--;
+        }
+        return 1 ;
+    }
+
 
     public static void main(String args[]) {
         // Arrays creation
@@ -54,6 +67,9 @@ public class ArraysBasic {
 
         int res = findGreatest(numberarr);
         System.out.println("The greatest number is " + res);
+        System.out.println("Reverse Array :" );
+        reverse(numberarr);
+        display(numberarr);
 
 
     }
