@@ -59,7 +59,7 @@ public class MoreQues {
             int start = i ;
             for(int j = i ; j<num.length ; j++){
                 int end =j ;
-                currentSum = start == 0 ? prefix[end] : prefix[end] - prefix[i-1] ;
+                currentSum = start  == 0 ? prefix[end] : prefix[end] - prefix[i-1] ;
                 if(maxSum < currentSum ){
                     maxSum = currentSum;
                 }
@@ -68,13 +68,42 @@ public class MoreQues {
         }
 
         System.out.println("Maximum subArray is :" + maxSum);
-
-         
     }
 
+    //finding the maxSubArray using the Kadanes algorithms
+    public static void KadanesAlgo(int num[]){
+        int currentSum = 0 ;
+        int maxSum = Integer.MIN_VALUE;
+
+        // checking if array having the all negative number in that case the output will be changes
+        boolean isPositive = false ;
+        for(int i = 0 ; i<num.length ; i++){
+            if(num[i] > 0 ){
+                isPositive = true;
+                break;
+            }
+        }
+
+        // now if all number are not negative we can use the kadane other wise we use another
+        //if in the questioin we have asked that if all num are negative then print 0 ao we can use the kadanes
+        if(isPositive){
+            for(int i =0 ; i<num.length ; i++){
+                currentSum = currentSum + num[i];
+                if(currentSum < 0){
+                    currentSum = 0;
+                }
+                maxSum = Math.max(maxSum, currentSum);
+            }
+
+            System.out.println("MaxSubArray "+ maxSum);
+        }else{
+            prefixArray(num);
+        }
+    }
     public static void main(String args[]) {
      int arr1[] = { 10, 40, 80, 2, 89, 90, 10, 45, 78 };
-     int arr2[] = { -1,2,5,1 };
+     int arr2[] = { -1,-2,-5,-1 };
+     int arr3[] = { -2,-3,4,-1,-2,1,5,-3 };
      //printing the pairs 
      pairs(arr1);
 
@@ -85,6 +114,8 @@ public class MoreQues {
      MaxSubArray(arr2);
      //maxing subarray (prefixmethod)
      prefixArray(arr2);
+     //maxSubArray (kadane's algorithm)
+     KadanesAlgo(arr3);
 
 
 
