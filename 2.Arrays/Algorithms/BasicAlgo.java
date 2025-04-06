@@ -67,9 +67,9 @@ public class BasicAlgo {
         boolean res = binarySearchRecursive(arr2, key2, 0, arr2.length - 1);
     
         if (res) {
-            System.out.println("Number was found in the array: " + key2);
+            System.out.println("Using the Recursive Number was found in the array: " + key2);
         } else {
-            System.out.println("Number was not found in the array.");
+            System.out.println("Using the Recursive Number was not found in the array.");
         }
 
 
